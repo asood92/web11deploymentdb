@@ -22,13 +22,6 @@ client = MongoClient(
 
 db = client[MONGODB_DBNAME]
 
-
-# users_collection = db.users
-# new_user = {"username": "me", "password": "1234"}
-# users_collection.insert_one(new_user)
-# all_users = users_collection.find()
-# print(list(all_users))
-
 plants_collection = db.plants
 harvests_collection = db.harvests
 
@@ -62,7 +55,7 @@ def create():
         new_plant = {
             "name": request.form.get("name"),
             "variety": request.form.get("variety"),
-            "photo_url": request.form.get("photo_url"),
+            "photo_url": request.form.get("photo"),
             "date_planted": request.form.get("date_planted"),
         }
 
@@ -92,8 +85,8 @@ def harvest(plant_id):
     Accepts a POST request with data for 1 harvest and inserts into database.
     """
     new_harvest = {
-        "quantity": request.forms.get("harvested_amount"),  # e.g. '3 tomatoes'
-        "date": request.forms.get("date_planted"),
+        "quantity": request.form.get("harvested_amount"),  # e.g. '3 tomatoes'
+        "date": request.form.get("date_planted"),
         "plant_id": plant_id,
     }
     harvests_collection.insert_one(new_harvest)
