@@ -11,7 +11,7 @@ import os
 load_dotenv()
 MONGODB_USERNAME = os.getenv("MONGODB_USERNAME")
 MONGODB_PASSWORD = os.getenv("MONGODB_PASSWORD")
-MONGODB_DBNAME = "test"
+MONGODB_DBNAME = "testing"
 
 app = Flask(__name__)
 
