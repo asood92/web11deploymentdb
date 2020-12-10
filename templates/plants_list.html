@@ -12,16 +12,16 @@
         <div class="items">
           {% for plant in plants %}
 
-          <div class="card">
-            <a href="/plant/{{ plant._id}}">
-              <img src="{{ plant.photo_url }}" alt="">
-            </a>
+            <div class="card">
+              <a href="/plant/{{ plant._id}}">
+                <img src="{{ plant.photo_url }}" alt="">
+              </a>
 
-            <div class="card-content">
-              <a href="/plant/{{ plant._id }}">{{ plant.name }}</a>
+              <div class="card-content">
+                <a href="/plant/{{ plant._id }}">{{ plant.name }}</a>
+              </div>
+
             </div>
-
-          </div>
           {% endfor %}
         </div>
     </div>
