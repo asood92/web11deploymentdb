@@ -96,6 +96,7 @@ def harvest(plant_id):
         "date": request.forms.get("date_planted"),
         "plant_id": plant_id,
     }
+    harvests_collection.insert_one(new_harvest)
 
     return redirect(url_for("detail", plant_id=plant_id))
 
