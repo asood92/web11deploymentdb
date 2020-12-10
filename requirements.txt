@@ -8,3 +8,4 @@ MarkupSafe
 pymongo
 Werkzeug
 dotenv
+setuptools
