@@ -22,11 +22,11 @@ client = MongoClient(
 db = client[MONGODB_DBNAME]
 
 
-# users_collection = db.users
-# new_user = {"username": "me", "password": "1234"}
-# users_collection.insert_one(new_user)
-# all_users = users_collection.find()
-# print(list(all_users))
+users_collection = db.users
+new_user = {"username": "me", "password": "1234"}
+users_collection.insert_one(new_user)
+all_users = users_collection.find()
+print(list(all_users))
 # plants_collection = mongo.db.plants
 # harvests_collection = mongo.db.harvests
 
