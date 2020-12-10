@@ -41,16 +41,12 @@
             </fieldset>
         </form>
 
-        {#
-            TODO: Create a for loop here to loop over all harvests (passed in
-            from the route's context) and display their information.
-        #}
         <section id="harvest-history">
             <h3>Harvest History</h3>
 
             <ul>
                 {% for harvest in harvests %}
-                    <li>{{ harvest.date }}: Harvested {{ harvest.quantity }} {{ harvest._id }}</li>
+                    <li>{{ harvest.date }}: Harvested {{ harvest.quantity }}</li>
                 {% endfor %}
             </ul>
         </section>
